@@ -1,0 +1,12 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: pedal-config-map
+data:
+  quarkus.datasource.db-kind: postgresql
+  quarkus.datasource.jdbc.url: jdbc:postgresql://postgres.pedal.svc.cluster.local:5432/pedal
+  quarkus.datasource.username: testdbuser 
+  quarkus.datasource.password: testpassword
+  quarkus.hibernate-orm.database.generation: drop-and-create
+  quarkus.hibernate-orm.sql-load-script: import.sql
+
